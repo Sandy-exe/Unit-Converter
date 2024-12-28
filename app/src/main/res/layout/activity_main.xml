@@ -1,78 +1,226 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
+    android:background="@color/backgroundColor"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/app_bar"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"
-        android:elevation="4dp"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:title="My App Bar"
-        app:titleTextColor="@android:color/white" />
-
-    <ImageView
-        android:id="@+id/background"
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scaleType="centerCrop"
-        android:src="@drawable/wallpaper" />
+        android:layout_height="wrap_content"
+        android:background="@color/infoBlueColor"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"/>
 
-    <!-- Semi-transparent overlay -->
-
-    <View
-        android:id="@+id/dim_overlay"
+    <GridLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#88000000"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="-294dp" />
+        android:layout_height="0dp"
+        android:columnCount="2"
+        android:rowCount="1"
+        android:layout_weight="8"
+        android:padding="5dp"
+        android:layout_marginTop="20dp">
 
-    <EditText
-        android:id="@+id/kilo_edt"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="300dp"
-        android:hint="Please Enter the Kilos"
-        android:inputType="number"
-        android:textColor="@color/white"
-        android:textColorHint="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/btn"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <androidx.cardview.widget.CardView
+            android:id="@+id/area_cardView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="15dp"
+            app:cardMaxElevation="10dp"
+            app:cardBackgroundColor="@color/cardColor"
+            app:cardCornerRadius="15dp">
 
-    <Button
-        android:id="@+id/btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Convert Now"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/kilo_edt" />
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/area"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"
+                android:importantForAccessibility="no" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/area"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                android:layout_gravity="bottom|center"
+                android:layout_marginBottom="25dp"
+                />
 
-    <TextView
-        android:id="@+id/result_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="552dp"
-        android:text="0"
-        android:textColor="@color/white"
-        android:textSize="48sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/speed_cardView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="15dp"
+            app:cardBackgroundColor="@color/cardColor"
+            app:cardMaxElevation="10dp"
+            app:cardCornerRadius="15dp">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/speed"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/speed"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                android:layout_gravity="bottom|center"
+                android:layout_marginBottom="25dp"
+                />
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/length_cardView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="15dp"
+            app:cardBackgroundColor="@color/cardColor"
+            app:cardMaxElevation="10dp"
+            app:cardCornerRadius="15dp">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/length"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/length"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                android:layout_gravity="bottom|center"
+                android:layout_marginBottom="25dp"
+                />
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/temperature_cardView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="15dp"
+            app:cardBackgroundColor="@color/cardColor"
+            app:cardMaxElevation="10dp"
+            app:cardCornerRadius="15dp">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/temperature"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/temperature"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                android:layout_gravity="bottom|center"
+                android:layout_marginBottom="25dp"
+                />
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/frequency_cardView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="15dp"
+            app:cardBackgroundColor="@color/cardColor"
+            app:cardMaxElevation="10dp"
+            app:cardCornerRadius="15dp">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/frequency"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"
+                android:importantForAccessibility="no" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/frequency"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textSize="32sp"
+                android:layout_gravity="bottom|center"
+                android:layout_marginBottom="25dp"
+                />
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/mass_cardView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="15dp"
+            app:cardBackgroundColor="@color/cardColor"
+            app:cardMaxElevation="10dp"
+            app:cardCornerRadius="15dp">
+
+            <ImageView
+                android:id="@+id/area_ic"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/mass"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/mass"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textSize="32sp"
+                android:layout_gravity="bottom|center"
+                android:layout_marginBottom="25dp"
+                />
+        </androidx.cardview.widget.CardView>
+    </GridLayout>
+</LinearLayout>
