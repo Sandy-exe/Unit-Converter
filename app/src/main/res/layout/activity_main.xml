@@ -16,11 +16,14 @@
         android:src="@drawable/wallpaper" />
 
     <!-- Semi-transparent overlay -->
+
     <View
         android:id="@+id/dim_overlay"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#88000000" />
+        android:background="#88000000"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-294dp" />
 
     <EditText
         android:id="@+id/kilo_edt"
@@ -52,7 +55,7 @@
         android:id="@+id/result_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="184dp"
+        android:layout_marginBottom="552dp"
         android:text="0"
         android:textColor="@color/white"
         android:textSize="48sp"
