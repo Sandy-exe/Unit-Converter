@@ -1,4 +1,4 @@
-package com.rajkishorbgp.unitconverter
+package com.example.unitconverter
 
 import android.content.Intent
 import android.content.res.Configuration
@@ -7,7 +7,7 @@ import android.view.MenuItem
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
-import com.rajkishorbgp.unitconverter.databinding.ActivitySettingBinding
+import com.example.unitconverter.databinding.ActivitySettingBinding
 import java.util.Locale
 
 @Suppress("DEPRECATION")

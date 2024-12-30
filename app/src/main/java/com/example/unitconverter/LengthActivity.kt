@@ -1,4 +1,4 @@
-package com.rajkishorbgp.unitconverter
+package com.example.unitconverter
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -7,7 +7,7 @@ import android.view.View
 import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.appcompat.widget.Toolbar
-import com.rajkishorbgp.unitconverter.databinding.ActivityLengthBinding
+import com.example.unitconverter.databinding.ActivityLengthBinding
 import java.text.DecimalFormat
 
 @Suppress("DEPRECATION")

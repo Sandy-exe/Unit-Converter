@@ -4,11 +4,16 @@ plugins {
 }
 
 android {
-    namespace = "com.example.first_app"
+    namespace = "com.example.unitconverter"
     compileSdk = 34
 
+    buildFeatures{
+        viewBinding = true
+    }
+
+
     defaultConfig {
-        applicationId = "com.example.first_app"
+        applicationId = "com.example.unitconverter"
         minSdk = 27
         targetSdk = 34
         versionCode = 1
@@ -33,6 +38,8 @@ android {
     kotlinOptions {
         jvmTarget = "11"
     }
+
+
 }
 
 dependencies {

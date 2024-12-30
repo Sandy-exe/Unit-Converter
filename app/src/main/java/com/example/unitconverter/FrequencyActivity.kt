@@ -1,4 +1,4 @@
-package com.rajkishorbgp.unitconverter
+package com.example.unitconverter
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -6,7 +6,7 @@ import android.view.MenuItem
 import android.view.View
 import android.widget.ArrayAdapter
 import android.widget.Toast
-import com.rajkishorbgp.unitconverter.databinding.ActivityFrequencyBinding
+import com.example.unitconverter.databinding.ActivityFrequencyBinding
 import java.text.DecimalFormat
 
 @Suppress("DEPRECATION")

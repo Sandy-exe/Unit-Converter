@@ -1,4 +1,4 @@
-package com.example.first_app
+package com.example.unitconverter
 
 import org.junit.Test
 
