@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+
     <color name="backgroundColor">#5B198F</color>
     <color name="cardColor">#AF17A4</color>
     <color name="textColor">#000000</color>
@@ -12,6 +13,7 @@
     <color name="successColor">#53d76a</color>
     <color name="warningColor">#ddaa3b</color>
     <color name="dangerColor">#e5000f</color>
+    <color name="primaryDarkColor">#e5000f</color>
 
     <!-- Whites -->
     <color name="white">#ffffff</color>
@@ -115,6 +117,7 @@
     <color name="carrotColor">#ed9121</color>
     <color name="mandarinColor">#f79137</color>
 
+
     <!-- Browns -->
     <color name="chiliPowderColor">#c73f17</color>
     <color name="burntSiennaColor">#8a360f</color>
@@ -127,6 +130,14 @@
     <color name="mudColor">#462d1d</color>
     <color name="siennaColor">#a0522d</color>
     <color name="dustColor">#ecd6c5</color>
+
+    <!-- Logo Colors -->
+    <color name="logo1">#E5ECF3</color>
+    <color name="logo2">#20394C</color>
+    <color name="logo3">#E5ECF3</color>
+
+
+
 
 
 </resources>
