@@ -49,7 +49,7 @@ class MassActivity : AppCompatActivity() {
         val fromUnitPosition = binding.spinnerFrom.selectedItemPosition
         val toUnitPosition = binding.spinnerTo.selectedItemPosition
 
-        val conversionResult = calculateConversion(inputMass, toUnitPosition, fromUnitPosition)
+        val conversionResult = calculateConversion(inputMass,fromUnitPosition, toUnitPosition)
         displayResult(conversionResult)
     }
 
@@ -225,8 +225,7 @@ class MassActivity : AppCompatActivity() {
     }
 
     private fun displayResult(result: Double) {
-        val resultText = DecimalFormat("#.#####").format(result)
-        binding.conversionResult.text = resultText
+        binding.conversionResult.text = result.toString()
         binding.conversionResult.visibility = View.VISIBLE
     }
 

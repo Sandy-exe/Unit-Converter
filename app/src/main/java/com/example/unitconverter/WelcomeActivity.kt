@@ -11,7 +11,7 @@ class WelcomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_welcome)
 
-        Handler(Looper.getMainLooper()).postDelayed(3000){
+        Handler(Looper.getMainLooper()).postDelayed(2000){
             startActivity(Intent(this@WelcomeActivity, MainActivity::class.java))
             finish()
         }

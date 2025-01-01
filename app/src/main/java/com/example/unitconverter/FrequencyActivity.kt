@@ -48,7 +48,7 @@ class FrequencyActivity : AppCompatActivity() {
         val fromUnitPosition = binding.spinnerFrom.selectedItemPosition
         val toUnitPosition = binding.spinnerTo.selectedItemPosition
 
-        val conversionResult = calculateConversion(inputFrequency, toUnitPosition, fromUnitPosition)
+        val conversionResult = calculateConversion(inputFrequency, fromUnitPosition, toUnitPosition)
         displayResult(conversionResult)
     }
 
@@ -132,8 +132,7 @@ class FrequencyActivity : AppCompatActivity() {
     }
 
     private fun displayResult(result: Double) {
-        val resultText = DecimalFormat("#.#####").format(result)
-        binding.conversionResult.text = resultText
+        binding.conversionResult.text = result.toString()
         binding.conversionResult.visibility = View.VISIBLE
     }
 

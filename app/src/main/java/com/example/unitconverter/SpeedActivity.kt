@@ -49,7 +49,7 @@ class SpeedActivity : AppCompatActivity() {
         val fromUnitPosition = binding.spinnerFrom.selectedItemPosition
         val toUnitPosition = binding.spinnerTo.selectedItemPosition
 
-        val conversionResult = calculateConversion(inputSpeed, toUnitPosition, fromUnitPosition)
+        val conversionResult = calculateConversion(inputSpeed, fromUnitPosition, toUnitPosition)
         displayResult(conversionResult)
     }
 
@@ -153,8 +153,7 @@ class SpeedActivity : AppCompatActivity() {
     }
 
     private fun displayResult(result: Double) {
-        val resultText = DecimalFormat("#.#####").format(result)
-        binding.conversionResult.text = resultText
+        binding.conversionResult.text = result.toString()
         binding.conversionResult.visibility = View.VISIBLE
     }
 

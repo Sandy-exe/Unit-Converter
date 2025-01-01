@@ -50,7 +50,7 @@ class LengthActivity : AppCompatActivity() {
         val fromUnitPosition = binding.spinnerFrom.selectedItemPosition
         val toUnitPosition = binding.spinnerTo.selectedItemPosition
 
-        val conversionResult = calculateConversion(inputLength, toUnitPosition, fromUnitPosition)
+        val conversionResult = calculateConversion(inputLength, fromUnitPosition, toUnitPosition)
         displayResult(conversionResult)
     }
 
@@ -87,8 +87,7 @@ class LengthActivity : AppCompatActivity() {
     }
 
     private fun displayResult(result: Double) {
-        val resultText = DecimalFormat("#.#####").format(result)
-        binding.conversionResult.text = resultText
+        binding.conversionResult.text = result.toString()
         binding.conversionResult.visibility = View.VISIBLE
     }
 
